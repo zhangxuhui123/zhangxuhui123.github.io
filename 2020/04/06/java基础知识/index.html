@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      article title | SARIAY-Blog
+      java基础知识点 | SARIAY-Blog
     
   </title>
   <meta name="author" content="Sariay">
@@ -164,7 +164,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《article title》
+			当前文章&nbsp;:&nbsp;《java基础知识点》
 		
 	</p>
 
@@ -266,6 +266,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -273,8 +285,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/15/article-title/" itemprop="url">
-		article title
+	<a href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
+		java基础知识点
 	</a>
 
 	</div>
@@ -287,9 +299,9 @@
 
 	发布于
 
-	<a href="/2019/11/15/article-title/" itemprop="url">
-		<time datetime="2019-11-15T10:59:00.000Z" itemprop="datePublished">
-	  		2019-11-15
+	<a href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
+		<time datetime="2020-04-06T09:42:19.139Z" itemprop="datePublished">
+	  		2020-04-06
 	  </time>
 	</a>
 	&nbsp;
@@ -305,9 +317,9 @@
 
 	更新于
 
-	<a href="/2019/11/15/article-title/" itemprop="url">
-		<time datetime="2019-11-15T10:59:00.000Z" itemprop="dateUpdated">
-	  		2019-11-15
+	<a href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
+		<time datetime="2020-04-06T09:42:19.139Z" itemprop="dateUpdated">
+	  		2020-04-06
 	  </time>
 	</a> 
 
@@ -326,7 +338,14 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-			
+		<h2 id="字符串常用方法"><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h2><h3 id="获取字符串长度"><a href="#获取字符串长度" class="headerlink" title="获取字符串长度"></a>获取字符串长度</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"We are students"</span>;</span><br><span class="line">System.out.println(<span class="string">"字符串的长度为："</span>+s.length());</span><br></pre></td></tr></table></figure>
+<h3 id="获取指定字符的索引位置"><a href="#获取指定字符的索引位置" class="headerlink" title="获取指定字符的索引位置"></a>获取指定字符的索引位置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"We are students"</span>;</span><br><span class="line">System.out.println(<span class="string">"字符s在字符串s中第一次出现的位置："</span>+s.indexOf(<span class="string">"s"</span>));</span><br><span class="line"><span class="comment">// 某字符在字符串中第一次出现的位置</span></span><br><span class="line">System.out.println(<span class="string">"字符s在字符串s中最后一次出现的位置："</span>+s.lastIndexOf(<span class="string">"s"</span>));</span><br><span class="line"><span class="comment">//某字符在字符串中最后一次出现的位置</span></span><br><span class="line"><span class="comment">//若没有该字符则返回-1</span></span><br><span class="line"><span class="comment">//索引从0开始</span></span><br><span class="line"><span class="comment">//若字符串为空字符串，则返回的结果与length（）方法返回结果相同</span></span><br></pre></td></tr></table></figure>
+<h3 id="获取指定索引位置的字符"><a href="#获取指定索引位置的字符" class="headerlink" title="获取指定索引位置的字符"></a>获取指定索引位置的字符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="keyword">char</span> mychar = s.charAt(<span class="number">6</span>);</span><br><span class="line">System.out.println(<span class="string">"字符串s中索引位置是6的字符为："</span>+mychar);</span><br></pre></td></tr></table></figure>
+<h3 id="去除字符串中的空格"><a href="#去除字符串中的空格" class="headerlink" title="去除字符串中的空格"></a>去除字符串中的空格</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"  We are students  "</span>;</span><br><span class="line">System.out.println(<span class="string">"字符串s去掉最前边和最后边空格后为："</span>+s.trim());</span><br><span class="line"><span class="comment">// str.trim()方法去除字符串头部与尾部的空格</span></span><br><span class="line">System.out.println(<span class="string">"字符串s去掉所有空格后为："</span>+s.replaceAll(<span class="string">" "</span>,<span class="string">""</span>));</span><br><span class="line"><span class="comment">// str.replaceAll(String regex,String replacement);</span></span><br><span class="line"><span class="comment">//regex为字符串str中想要被替换的部分；</span></span><br><span class="line"><span class="comment">//replacement为用来替换的部分；</span></span><br></pre></td></tr></table></figure>
+
+
+
+	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -344,12 +363,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);" target="_blank" rel="noopener">返回顶部</a>
 		
-			<a href="/2019/11/16/%E6%A8%A1%E6%9D%BF/" title="模板" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/11/15/hello-world/" title="Hello World" rel="next">
+			<a href="/2019/11/16/%E6%A8%A1%E6%9D%BF/" title="模板" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -367,30 +382,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="java基础知识点">
-								java基础知识点			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								四月 6日, 2020				
-							</p>
-							<p class="relate-post-content">
-								字符串常用方法获取字符串长度12String s = "We are students";System.out.println("字符串的长度为："+s.length());
-获取指定字符的索引位置12345678String s =...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="java基础知识点">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="java基础知识点"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -418,6 +409,29 @@ hw （二级标题）
 							<a href="/2019/11/16/%E6%A8%A1%E6%9D%BF/" title="模板">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="模板"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/15/article-title/" title="article title">
+								article title			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 15日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/15/article-title/" title="article title">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="article title"/>
 							</a>
 						</div>
 					</li>											

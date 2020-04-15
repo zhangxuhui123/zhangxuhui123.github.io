@@ -266,6 +266,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -307,7 +319,7 @@
 
 	<a href="/2020/04/07/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" itemprop="url">
 		<time datetime="2020-04-07T08:58:49.239Z" itemprop="dateUpdated">
-	  		2020-04-07
+	  		2020-04-15
 	  </time>
 	</a> 
 
@@ -326,7 +338,104 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-			
+		<hr>
+<h2 id="title：-数据库基础操作"><a href="#title：-数据库基础操作" class="headerlink" title="title： 数据库基础操作"></a>title： 数据库基础操作</h2><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ol>
+<li>SQL语句以分号（;）结尾，所以可以使用空格和缩进来增加可读性。</li>
+<li>MySQL数据库的SQL语句不区分大小写，为了显眼，关键字建议使用大写。</li>
+<li>3种注释：<ul>
+<li>单行注释： – 注释内容（–空格）   或   # 注释内容（MySQL特有）（#可以加空格也可以不加）</li>
+<li>多行注释： /<em>注释内容</em>/<h2 id="SQL分类"><a href="#SQL分类" class="headerlink" title="SQL分类"></a>SQL分类</h2></li>
+</ul>
+</li>
+<li>DQL (Data Query Language)数据查询语言。select，where，order by，gruop by和having等。<ul>
+<li>查询表中的数据</li>
+</ul>
+</li>
+<li>DML（Data Manipulation Language）数据操作语言。insert，update和delete等<ul>
+<li>增删改表中的数据</li>
+</ul>
+</li>
+<li>DCL （Data Control Language）数据控制语言。<ul>
+<li>授权的（了解）</li>
+</ul>
+</li>
+<li>DDL （Data Definition Language）数据定义语言。alter、create和drop 等<ul>
+<li>操作数据库和表的<h3 id="DDL-：操作数据库，表"><a href="#DDL-：操作数据库，表" class="headerlink" title="DDL ：操作数据库，表"></a>DDL ：操作数据库，表</h3></li>
+</ul>
+</li>
+<li>操作数据库：CRUD(增删改查)<ol>
+<li>C(create):创建。<ul>
+<li>创建一个数据库：create database 数据库名称；</li>
+<li>创建一个不存在的数据库（如果存在则不创建新的）（避免创建一个已经存在的数据库报错）： create database if not exists 数据库名称；</li>
+<li>创建一个指定字符集的数据库： create database 数据库名称  character  set  字符集名称；</li>
+<li>练习：创建db4 数据库，判断是否存在并致顶字符集为gbk： create database if not exists  db4 character set gbk；</li>
+</ul>
+</li>
+<li>R(Retrieve):查询。<ul>
+<li>查询所有数据库的名称：show databases;</li>
+<li>查看某个数据据库的字符集：查看某个数据库的创建语句：show create database 数据库名称；</li>
+</ul>
+</li>
+<li>U(Update):修改。<ul>
+<li>修改数据库的字符集： alter database 数据库名称 character set 字符集名称；</li>
+</ul>
+</li>
+<li>D(Delete)：删除。<ul>
+<li>删除数据库： drop database 数据库名称；</li>
+<li>删除一个存在的数据库（避免删除一个不存在的数据库报错）： drop database if exists 数据库名称；</li>
+</ul>
+</li>
+<li>使用数据库：进入数据库。<ul>
+<li>查询当前正在使用的数据库名称： select database()；</li>
+<li>使用数据库： use 数据库名称；（不用再加database了）</li>
+</ul>
+</li>
+<li>操作表<ol>
+<li>C(create):创建。<ul>
+<li>create table 表名（<br>列名1 数据类型1，<br>列名2 数据类型2，<br>…，<br>列名n 数据类型n）;</li>
+<li>注意 <ol>
+<li>最后一列不需要加逗号。</li>
+<li>数据库中常用数据类型<ol>
+<li>int ：整数类型。<ul>
+<li>例  age int，</li>
+</ul>
+</li>
+<li>double： 小数类型<ul>
+<li>score double（数据长度，小数点后位数），</li>
+<li>例  score double（5，2），</li>
+</ul>
+</li>
+<li>date：日期类型，只包含年月日，yyyy-MM-dd</li>
+<li>datetime：日期类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss</li>
+<li>timestamp：时间戳类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss<ul>
+<li>若将来不给这个字段赋值，或赋值为null则默认使用当前系统时间来自动赋值。</li>
+</ul>
+</li>
+<li>varchar：字符串类型<ul>
+<li>name varchar（最大字符长度），</li>
+<li>例 name varchar（20），</li>
+<li>zhangsan 8个字符； 张三 两个字符。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>R(Retrieve):查询。<ul>
+<li>查询某个数据库中所有表的名称：show tables；</li>
+<li>查询表结构： desc 表明；</li>
+</ul>
+</li>
+<li>U(Update):修改。</li>
+<li>D(Delete)：删除。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>

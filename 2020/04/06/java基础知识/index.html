@@ -319,7 +319,7 @@
 
 	<a href="/2020/04/06/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
 		<time datetime="2020-04-06T09:42:19.139Z" itemprop="dateUpdated">
-	  		2020-04-07
+	  		2020-04-15
 	  </time>
 	</a> 
 
@@ -345,6 +345,8 @@
 <h3 id="获取指定索引位置的字符"><a href="#获取指定索引位置的字符" class="headerlink" title="获取指定索引位置的字符"></a>获取指定索引位置的字符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="keyword">char</span> mychar = s.charAt(<span class="number">6</span>);</span><br><span class="line">System.out.println(<span class="string">"字符串s中索引位置是6的字符为："</span>+mychar);</span><br></pre></td></tr></table></figure>
 
 <h3 id="去除字符串中的空格"><a href="#去除字符串中的空格" class="headerlink" title="去除字符串中的空格"></a>去除字符串中的空格</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"  We are students  "</span>;</span><br><span class="line">System.out.println(<span class="string">"字符串s去掉最前边和最后边空格后为："</span>+s.trim());</span><br><span class="line"><span class="comment">// str.trim()方法去除字符串头部与尾部的空格</span></span><br><span class="line">System.out.println(<span class="string">"字符串s去掉所有空格后为："</span>+s.replaceAll(<span class="string">" "</span>,<span class="string">""</span>));</span><br><span class="line"><span class="comment">// str.replaceAll(String regex,String replacement);</span></span><br><span class="line"><span class="comment">//regex为字符串str中想要被替换的部分；</span></span><br><span class="line"><span class="comment">//replacement为用来替换的部分；</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"bad bad study"</span>;</span><br><span class="line">String newsF = s.replace(<span class="string">"bad"</span>,<span class="string">"good"</span>);</span><br><span class="line">System.out.println(<span class="string">"替换后的字符串是："</span>+newsF)；</span><br><span class="line"><span class="comment">// str.replace(String regex,String replacement);</span></span><br><span class="line"><span class="comment">//regex为字符串str中想要被替换的部分；</span></span><br><span class="line"><span class="comment">//replacement为用来替换的部分；</span></span><br><span class="line">String newsS = s.replaceFirst(<span class="string">"bad"</span>,<span class="string">"good"</span>);</span><br><span class="line">System.out.println(<span class="string">"替换掉第一个要替换的字符后的字符串是："</span>+newsF)；</span><br><span class="line"><span class="comment">// str.replaceFirst("String regex","String replacement")方法用于替换第一个出现的指定字符串</span></span><br></pre></td></tr></table></figure>
+
 
 
 
@@ -424,6 +426,11 @@
 							</p>
 							<p class="relate-post-content">
 								
+title： 数据库基础操作注意
+SQL语句以分号（;）结尾，所以可以使用空格和缩进来增加可读性。
+MySQL数据库的SQL语句不区分大小写，为了显眼，关键字建议使用大写。
+3种注释：
+单行注释： – 注释内容（–空格）   或  ...
 							</p>
 						</div>
 

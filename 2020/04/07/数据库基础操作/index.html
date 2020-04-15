@@ -338,30 +338,21 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ol>
+		<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ol>
 <li>SQL语句以分号（;）结尾，所以可以使用空格和缩进来增加可读性。</li>
 <li>MySQL数据库的SQL语句不区分大小写，为了显眼，关键字建议使用大写。</li>
 <li>3种注释：<ul>
 <li>单行注释： – 注释内容（–空格）   或   # 注释内容（MySQL特有）（#可以加空格也可以不加）</li>
-<li>多行注释： /<em>注释内容</em>/<h2 id="SQL分类"><a href="#SQL分类" class="headerlink" title="SQL分类"></a>SQL分类</h2></li>
+<li>多行注释： /<em>注释内容</em>/</li>
 </ul>
 </li>
-<li>DQL (Data Query Language)数据查询语言。select，where，order by，gruop by和having等。<ul>
-<li>查询表中的数据</li>
-</ul>
-</li>
-<li>DML（Data Manipulation Language）数据操作语言。insert，update和delete等<ul>
-<li>增删改表中的数据</li>
-</ul>
-</li>
-<li>DCL （Data Control Language）数据控制语言。<ul>
-<li>授权的（了解）</li>
-</ul>
-</li>
-<li>DDL （Data Definition Language）数据定义语言。alter、create和drop 等<ul>
-<li>操作数据库和表的<h3 id="DDL-：操作数据库，表"><a href="#DDL-：操作数据库，表" class="headerlink" title="DDL ：操作数据库，表"></a>DDL ：操作数据库，表</h3></li>
-</ul>
-</li>
+</ol>
+<hr>
+<h2 id="SQL分类"><a href="#SQL分类" class="headerlink" title="SQL分类"></a>SQL分类</h2><ol>
+<li>DQL (Data Query Language)数据查询语言。select，where，order by，gruop by和having等。<pre><code>* 查询表中的数据</code></pre></li>
+<li>DML（Data Manipulation Language）数据操作语言。insert，update和delete等<pre><code>* 增删改表中的数据</code></pre></li>
+<li>DCL （Data Control Language）数据控制语言。<pre><code>* 授权的（了解）</code></pre></li>
+<li>DDL （Data Definition Language）数据定义语言。alter、create和drop 等<pre><code>* 操作数据库和表的</code></pre><h3 id="DDL-：操作数据库，表"><a href="#DDL-：操作数据库，表" class="headerlink" title="DDL ：操作数据库，表"></a>DDL ：操作数据库，表</h3><ol>
 <li>操作数据库：CRUD(增删改查)<ol>
 <li>C(create):创建。<ul>
 <li>创建一个数据库：create database 数据库名称；</li>
@@ -389,9 +380,11 @@
 <li>使用数据库： use 数据库名称；（不用再加database了）</li>
 </ul>
 </li>
+</ol>
+</li>
 <li>操作表<ol>
 <li>C(create):创建。<ul>
-<li>create table 表名（<br>列名1 数据类型1，<br>列名2 数据类型2，<br>…，<br>列名n 数据类型n）;</li>
+<li>create table 表名（<br>  列名1 数据类型1，<br>  列名2 数据类型2，<br>  …，<br>  列名n 数据类型n）;</li>
 <li>注意 <ol>
 <li>最后一列不需要加逗号。</li>
 <li>数据库中常用数据类型<ol>

@@ -358,55 +358,11 @@
 <li><p>DDL （Data Definition Language）数据定义语言。alter、create和drop 等</p>
 <pre><code>* 操作数据库和表的</code></pre><h3 id="DDL-：操作数据库，表"><a href="#DDL-：操作数据库，表" class="headerlink" title="DDL ：操作数据库，表"></a>DDL ：操作数据库，表</h3><ol>
 <li><p>操作数据库：CRUD(增删改查)</p>
-<pre><code>1. C(create):创建。
-    * 创建一个数据库：create database 数据库名称；
-    * 创建一个不存在的数据库（如果存在则不创建新的）（避免创建一个已经存在的数据库报错）： create database if not exists 数据库名称；
-    * 创建一个指定字符集的数据库： create database 数据库名称  character  set  字符集名称；
-    * 练习：创建db4 数据库，判断是否存在并致顶字符集为gbk： create database if not exists  db4 character set gbk；
-2. R(Retrieve):查询。
-    * 查询所有数据库的名称：show databases;
-    * 查看某个数据据库的字符集：查看某个数据库的创建语句：show create database 数据库名称；
-3. U(Update):修改。
-    * 修改数据库的字符集： alter database 数据库名称 character set 字符集名称；
-4. D(Delete)：删除。
-    * 删除数据库： drop database 数据库名称；
-    * 删除一个存在的数据库（避免删除一个不存在的数据库报错）： drop database if exists 数据库名称；
-5. 使用数据库：进入数据库。
-    * 查询当前正在使用的数据库名称： select database()；
-    * 使用数据库： use 数据库名称；（不用再加database了）</code></pre><ol start="2">
-<li><p>操作表</p>
-<pre><code>1. C(create):创建。
-    * create table 表名（
-        列名1 数据类型1，
-        列名2 数据类型2，
-        ...，
-        列名n 数据类型n）;
-    * 注意 
-        1. 最后一列不需要加逗号。
-        2. 数据库中常用数据类型
-            1. int ：整数类型。
-                * 例  age int，
-            2. double： 小数类型
-                * score double（数据长度，小数点后位数），
-                * 例  score double（5，2），
-            3. date：日期类型，只包含年月日，yyyy-MM-dd
-            4. datetime：日期类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss
-            5. timestamp：时间戳类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss
-                * 若将来不给这个字段赋值，或赋值为null则默认使用当前系统时间来自动赋值。
-            6. varchar：字符串类型
-                * name varchar（最大字符长度），
-                * 例 name varchar（20），
-                * zhangsan 8个字符； 张三 两个字符。
-
-2. R(Retrieve):查询。
-    * 查询某个数据库中所有表的名称：show tables；
-    * 查询表结构： desc 表明；
-3. U(Update):修改。
-4. D(Delete)：删除。
-    * </code></pre></li>
+<pre><code><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1. C(<span class="keyword">create</span>):创建。</span><br><span class="line">    * 创建一个数据库： <span class="keyword">create</span> <span class="keyword">database</span> 数据库名称；</span><br><span class="line">    * 创建一个不存在的数据库（如果存在则不创建新的）（避免创建一个已经存在的数据库报错）： <span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> 数据库名称；</span><br><span class="line">    * 创建一个指定字符集的数据库： <span class="keyword">create</span> <span class="keyword">database</span> 数据库名称  <span class="built_in">character</span>  <span class="keyword">set</span>  字符集名称；</span><br><span class="line">    * 练习：创建db4 数据库，判断是否存在并致顶字符集为gbk： <span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span>  db4 <span class="built_in">character</span> <span class="keyword">set</span> gbk；</span><br><span class="line"><span class="number">2.</span> R(Retrieve):查询。</span><br><span class="line">    * 查询所有数据库的名称：<span class="keyword">show</span> <span class="keyword">databases</span>;</span><br><span class="line">    * 查看某个数据据库的字符集：查看某个数据库的创建语句：show create database 数据库名称；</span><br><span class="line">3. U(<span class="keyword">Update</span>):修改。</span><br><span class="line">    * 修改数据库的字符集： <span class="keyword">alter</span> <span class="keyword">database</span> 数据库名称 <span class="built_in">character</span> <span class="keyword">set</span> 字符集名称；</span><br><span class="line"><span class="number">4.</span> D(<span class="keyword">Delete</span>)：删除。</span><br><span class="line">    * 删除数据库： <span class="keyword">drop</span> <span class="keyword">database</span> 数据库名称；</span><br><span class="line">    * 删除一个存在的数据库（避免删除一个不存在的数据库报错）： <span class="keyword">drop</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">exists</span> 数据库名称；</span><br><span class="line"><span class="number">5.</span> 使用数据库：进入数据库。</span><br><span class="line">    * 查询当前正在使用的数据库名称： <span class="keyword">select</span> <span class="keyword">database</span>()；</span><br><span class="line">    * 使用数据库： <span class="keyword">use</span> 数据库名称；（不用再加<span class="keyword">database</span>了）</span><br></pre></td></tr></table></figure></code></pre></li>
 </ol>
 </li>
-</ol>
+<li><p>操作表</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1. C(<span class="keyword">create</span>):创建。</span><br><span class="line">    * <span class="keyword">create</span> <span class="keyword">table</span> 表名（</span><br><span class="line">        列名<span class="number">1</span> 数据类型<span class="number">1</span>，</span><br><span class="line">        列名<span class="number">2</span> 数据类型<span class="number">2</span>，</span><br><span class="line">        ...，</span><br><span class="line">        列名n 数据类型n）;</span><br><span class="line">    * 注意 </span><br><span class="line">        1. 最后一列不需要加逗号。</span><br><span class="line">        2. 数据库中常用数据类型</span><br><span class="line">            1. int ：整数类型。</span><br><span class="line">                * 例  age int，</span><br><span class="line">            2. double： 小数类型</span><br><span class="line">                * score double（数据长度，小数点后位数），</span><br><span class="line">                * 例  score double（5，2），</span><br><span class="line">            3. date：日期类型，只包含年月日，yyyy-MM-dd</span><br><span class="line">            4. datetime：日期类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss</span><br><span class="line">            5. timestamp：时间戳类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss</span><br><span class="line">                * 若将来不给这个字段赋值，或赋值为null则默认使用当前系统时间来自动赋值。</span><br><span class="line">            6. varchar：字符串类型</span><br><span class="line">                * name varchar（最大字符长度），</span><br><span class="line">                * 例 name varchar（20），</span><br><span class="line">                * zhangsan 8个字符； 张三 两个字符。</span><br><span class="line">2. R(Retrieve):查询。</span><br><span class="line">    * 查询某个数据库中所有表的名称：show tables；</span><br><span class="line">    * 查询表结构： desc 表明；</span><br><span class="line">3. U(<span class="keyword">Update</span>):修改。</span><br><span class="line"><span class="number">4.</span> D(<span class="keyword">Delete</span>)：删除。</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 	

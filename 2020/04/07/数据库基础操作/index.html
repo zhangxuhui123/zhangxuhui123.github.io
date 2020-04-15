@@ -358,83 +358,54 @@
 <li><p>DDL （Data Definition Language）数据定义语言。alter、create和drop 等</p>
 <pre><code>* 操作数据库和表的</code></pre><h3 id="DDL-：操作数据库，表"><a href="#DDL-：操作数据库，表" class="headerlink" title="DDL ：操作数据库，表"></a>DDL ：操作数据库，表</h3><ol>
 <li><p>操作数据库：CRUD(增删改查)</p>
-<ol>
-<li>C(create):创建。<ul>
-<li>创建一个数据库：create database 数据库名称；</li>
-<li>创建一个不存在的数据库（如果存在则不创建新的）（避免创建一个已经存在的数据库报错）： create database if not exists 数据库名称；</li>
-<li>创建一个指定字符集的数据库： create database 数据库名称  character  set  字符集名称；</li>
-<li>练习：创建db4 数据库，判断是否存在并致顶字符集为gbk： create database if not exists  db4 character set gbk；</li>
-</ul>
-</li>
-<li>R(Retrieve):查询。<ul>
-<li>查询所有数据库的名称：show databases;</li>
-<li>查看某个数据据库的字符集：查看某个数据库的创建语句：show create database 数据库名称；</li>
-</ul>
-</li>
-<li>U(Update):修改。<ul>
-<li>修改数据库的字符集： alter database 数据库名称 character set 字符集名称；</li>
-</ul>
-</li>
-<li>D(Delete)：删除。<ul>
-<li>删除数据库： drop database 数据库名称；</li>
-<li>删除一个存在的数据库（避免删除一个不存在的数据库报错）： drop database if exists 数据库名称；</li>
-</ul>
-</li>
-<li>使用数据库：进入数据库。<ul>
-<li>查询当前正在使用的数据库名称： select database()；</li>
-<li>使用数据库： use 数据库名称；（不用再加database了）</li>
-</ul>
-</li>
-</ol>
-</li>
+<pre><code>1. C(create):创建。
+    * 创建一个数据库：create database 数据库名称；
+    * 创建一个不存在的数据库（如果存在则不创建新的）（避免创建一个已经存在的数据库报错）： create database if not exists 数据库名称；
+    * 创建一个指定字符集的数据库： create database 数据库名称  character  set  字符集名称；
+    * 练习：创建db4 数据库，判断是否存在并致顶字符集为gbk： create database if not exists  db4 character set gbk；
+2. R(Retrieve):查询。
+    * 查询所有数据库的名称：show databases;
+    * 查看某个数据据库的字符集：查看某个数据库的创建语句：show create database 数据库名称；
+3. U(Update):修改。
+    * 修改数据库的字符集： alter database 数据库名称 character set 字符集名称；
+4. D(Delete)：删除。
+    * 删除数据库： drop database 数据库名称；
+    * 删除一个存在的数据库（避免删除一个不存在的数据库报错）： drop database if exists 数据库名称；
+5. 使用数据库：进入数据库。
+    * 查询当前正在使用的数据库名称： select database()；
+    * 使用数据库： use 数据库名称；（不用再加database了）</code></pre><ol start="2">
 <li><p>操作表</p>
-<ol>
-<li><p>C(create):创建。</p>
-<ul>
-<li>create table 表名（<br>  列名1 数据类型1，<br>  列名2 数据类型2，<br>  …，<br>  列名n 数据类型n）;</li>
-<li>注意 <ol>
-<li>最后一列不需要加逗号。</li>
-<li>数据库中常用数据类型<ol>
-<li>int ：整数类型。<ul>
-<li>例  age int，</li>
-</ul>
-</li>
-<li>double： 小数类型<ul>
-<li>score double（数据长度，小数点后位数），</li>
-<li>例  score double（5，2），</li>
-</ul>
-</li>
-<li>date：日期类型，只包含年月日，yyyy-MM-dd</li>
-<li>datetime：日期类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss</li>
-<li>timestamp：时间戳类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss<ul>
-<li>若将来不给这个字段赋值，或赋值为null则默认使用当前系统时间来自动赋值。</li>
-</ul>
-</li>
-<li>varchar：字符串类型<ul>
-<li>name varchar（最大字符长度），</li>
-<li>例 name varchar（20），</li>
-<li>zhangsan 8个字符； 张三 两个字符。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>R(Retrieve):查询。</p>
-<ul>
-<li>查询某个数据库中所有表的名称：show tables；</li>
-<li>查询表结构： desc 表明；</li>
-</ul>
-</li>
-<li><p>U(Update):修改。</p>
-</li>
-<li><p>D(Delete)：删除。</p>
-<ul>
-<li></li>
-</ul>
-</li>
+<pre><code>1. C(create):创建。
+    * create table 表名（
+        列名1 数据类型1，
+        列名2 数据类型2，
+        ...，
+        列名n 数据类型n）;
+    * 注意 
+        1. 最后一列不需要加逗号。
+        2. 数据库中常用数据类型
+            1. int ：整数类型。
+                * 例  age int，
+            2. double： 小数类型
+                * score double（数据长度，小数点后位数），
+                * 例  score double（5，2），
+            3. date：日期类型，只包含年月日，yyyy-MM-dd
+            4. datetime：日期类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss
+            5. timestamp：时间戳类型，包含年月日时分秒，yyyy-MM-dd HH:mm：ss
+                * 若将来不给这个字段赋值，或赋值为null则默认使用当前系统时间来自动赋值。
+            6. varchar：字符串类型
+                * name varchar（最大字符长度），
+                * 例 name varchar（20），
+                * zhangsan 8个字符； 张三 两个字符。
+
+2. R(Retrieve):查询。
+
+    * 查询某个数据库中所有表的名称：show tables；
+    * 查询表结构： desc 表明；
+
+3. U(Update):修改。
+4. D(Delete)：删除。
+    * </code></pre></li>
 </ol>
 </li>
 </ol>
